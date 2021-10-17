@@ -1,0 +1,43 @@
+<div class="musicPlayer w-100 position-fixed d-grid grid-custom container-fluid" [ngClass]="{'d-none': (payload.length == 0)}" >
+    <div class="controllers d-flex align-items-center justify-content-around">
+    <ion-icon name="arrow-back" class="color-wh fs-12 fs-18" id="prev" (click)="prev()"></ion-icon>
+    <ion-icon name="play" class="color-wh fs-23" id="play" (click)="play()" *ngIf="!loader && !playTarget"></ion-icon>
+    <div class="loader" *ngIf="loader"></div>
+    <ion-icon name="pause" class="color-wh fs-23" id="play" (click)="play()" *ngIf="!loader && playTarget "></ion-icon>
+    <ion-icon name="arrow-forward" class="color-wh fs-18" id="nxt" (click)="next()"></ion-icon>
+    <ion-icon name="repeat" class="fs-18" id="playl"  (click)="playlistInc()"   [ngClass]="{'color-wh' : playlistColor, 'color-or': !playlistColor}"></ion-icon>
+    <ion-icon name="shuffle" class=" fs-18" id="shuf" (click)="shuffleInc()" [ngClass]="{'color-wh' : shuffleColor, 'color-or': !shuffleColor}"></ion-icon>
+   </div> 
+   <div class="tfn d-flex ">
+       <img class="musicPlayerImg" src="{{playImg}}" id="musicImg">
+       <div class="d-grid timeSettings w-100">
+           <div class="nameTime d-flex justify-content-between">
+               <h4 class="mb-0 mt-0"><span class="songName color-wh fs-11" id="sn">{{ songTitle }}</span><span class="singerName pl-2 color-sv fs-11" id="an">{{ band }}</span></h4>
+               <div class="time d-flex align-items-end pb-1">
+                    <span class="current color-wh fs-11" id="curr">{{ curr }}</span>
+                    <span class="color-gr fs-11">/</span>
+                    <span class="duration color-sv fs-11" id="dur">{{ time }}</span>
+               </div>
+           </div>
+           <div class="progressBar w-100 d-flex  align-items-center position-relative mb-4" id="pr">
+               <div class="bar" [style.width]="barwidth" id=br></div>
+               <div #ball class="ball  position-absolute" [style.left]="barwidth" (mouseenter)="drag($event)" id="ball"></div>
+           </div>
+       </div>
+   </div>
+   <div class="vpl d-flex pl-2">
+      <div class="d-flex  w-100 align-items-center justify-content-start pl-4">
+            <ion-icon name="volume-high" class="color-wh"></ion-icon>
+            <div class="volBar w-50 d-flex  align-items-center position-relative d-flex m-2" id="volpr">
+                <div class="bar" id="volBall" (mouseenter)="volume($event)" [style.width]="volwidth"></div>
+                <div class="ball  position-absolute" id="ballVl" [style.left]="volwidth"></div>
+            </div>
+      </div>
+   </div>
+   <Div class="d-flex align-items-center">
+    <div><i *ngIf=' payload.length!==0 && token' [ngClass]="isLikeProps? 'fas' : 'far'" class="fa-heart color-wh"  (click)='toggelfavicon()'></i></div>
+    <div class="w-100 h-100 d-flex justify-content-center align-items-center playlistbtn color-wh">
+        <ion-icon name="apps-outline"></ion-icon>
+    </div>
+   </Div>
+</div>

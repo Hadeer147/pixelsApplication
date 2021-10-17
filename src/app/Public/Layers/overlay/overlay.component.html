@@ -1,0 +1,36 @@
+<div class="overlay position-fixed top-0 left-0 h-100 w-100  justify-content-center align-items-center">
+   
+    <div class="model container" id="playlistInsert" (click)="onClick($event)">
+        
+        <div class="idHolder" #btn></div>
+        <!-- Add new playlist form -->
+        <form class="p-2" #form="ngForm" (ngSubmit)="playlistCreateAdd(form,btn.id)">
+            <label>Add to new playlist </label>
+            <input type="text" placeholder="Playlist title" class="d-block w-100" name="playlist" ngModel>
+            <p class="error mt-2 fs-12">{{ failCreate }}</p>
+            <button  class="w-100">Save</button>
+        </form>
+       
+        <!-- Pre Exist playlist -->
+        <div class="playlists p-2">
+            <label>Or add to pre exist playlist</label>
+
+            <div class="playlist_data mt-2 d-flex align-items-center" *ngFor="let item of playlistsKey" #div>
+                <div class="data d-flex">
+                    <span (click)="playlistRemove(playlists[item].id,div)" class="color-wh mr-2">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </span>
+                    <div>
+                        <h4>{{ playlists[item].name }}</h4>
+                        <p>{{ playlists[item].created_at | date:'mediumDate'}}</p>
+                    </div>
+                </div>
+                <button class="ml-auto" *ngIf="showExistance(playlists[item].id,btn.id)" (click)="playlistAdd(playlists[item].id,btn.id)">Save</button>
+                <button class="ml-auto" *ngIf="!showExistance(playlists[item].id,btn.id)" (click)="playlistAdd(playlists[item].id,btn.id)">Remove</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

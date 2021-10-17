@@ -1,0 +1,33 @@
+/* Side Navbar */
+aside {
+    width: 200px;
+    min-height: 100vh;
+    height: 100%;
+    transition: var(--transition);
+
+}
+aside.close {
+    transform: translateX(-1000px);
+    width: 0;
+}
+aside .content {
+    width: 200px;
+    height: 100vh;
+}
+aside li {
+    padding: 14px 0;
+    font-size: 13px;
+    color: var(--colorWhite);
+}
+
+aside ion-icon {
+    padding-right: 10px;
+    font-size: 14px;
+    position: relative;
+    top: 3px;
+}
+
+aside .active a,
+aside .active ion-icon {
+    color: orangered;
+}

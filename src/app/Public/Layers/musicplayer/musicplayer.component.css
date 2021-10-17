@@ -1,0 +1,95 @@
+/* Music PLayer */
+.musicPlayer {
+    height: 60px;
+    background: var(--dark-gray);
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    user-select: none;
+ }
+ .musicPlayer ion-icon {
+     cursor: pointer;
+ }
+ .musicPlayer #shuf.active{
+     color: orangered !important;
+ }
+ .musicPlayer #playl.rs {
+     color: var(--grey) !important;
+ }
+ .musicPlayer #playl.rp {
+     color: orangered !important;
+ }
+ .musicPlayer.grid-custom {
+     grid-template-columns: 14% 66% 16% 4%;
+ }
+ .musicPlayer img {
+     width: 59px;
+     padding: 10px;
+     height: 56px;
+     border-radius: 14px;
+ }
+ .musicPlayer .timeSettings {
+     grid-template-rows: 55% 45%;
+     /* align-items: flex-end;  */
+ }
+ .musicPlayer .timeSettings  {
+     user-select: none !important;
+ }
+ .musicPlayer .timeSettings .progressBar,
+ .musicPlayer .vpl .volBar {
+     background-color: var(--grey);
+     height: 2px;
+     cursor: pointer;
+ }
+ .musicPlayer .timeSettings .progressBar .bar,
+ .musicPlayer .vpl .volBar .bar{
+     background-color: orangered;
+     height: 100%;
+     width: 0%;
+ }
+ .musicPlayer .vpl .volBar .bar {
+     width: 50%;
+ }
+ .musicPlayer .timeSettings .progressBar .bar.notrans {
+     transition: none !important;
+ }
+ .musicPlayer .timeSettings .progressBar .ball,
+ .musicPlayer  .volBar .ball {
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background-color: var(--sliver);
+ }
+ .musicPlayer  .volBar .ball{
+     left: 50%;
+ }
+ .musicPlayer .timeSettings .progressBar:hover .ball,
+ .musicPlayer .timeSettings .progressBar .bar:hover + .ball {
+     visibility: visible !important;
+ }
+
+ /* loader */
+
+.loader {
+    
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-top: 3px solid var(--colorWhite);
+    border-radius: 50%;
+    animation: load 0.9s  infinite linear;
+
+}
+
+.playlistbtn {
+    color: var(--colorWhite);
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

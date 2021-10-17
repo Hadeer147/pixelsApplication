@@ -1,0 +1,46 @@
+<div class="tb-container d-flex">
+  <div class="playlist mt-0 position-relative" style="background-image:  linear-gradient(356deg
+  ,var(--black),transparent),url('{{ playlistDisplayImg }}');" >
+    <div class="playlist-header" >
+      <div class="btn-area d-flex  ml-auto">
+         <button class="btn btn-danger" *ngIf="(playlistMusicCount == 0) false">Delete</button>
+      </div>
+      <div class="container">
+        <Div class="row mt-5">
+          <div class="playlist-poster p-3">
+            <img src="{{ playlistDisplayImg }}" class="w-100 h-100 playlistPortera">
+          </div>
+          <div class="music-info ml-4 mt-3" *ngIf="(playlistMusicCount > 0) true : false;">
+            <h2 *ngIf="playlistData.name.length > 0">{{ playlistData.name }}</h2>
+            <p>Created At: {{ playlistData.created_at | date:'mediumDate'}}</p>
+            <p>Number Of Songs: {{ playlistMusicCount  }}</p>
+            <button class="btn" (click)="getPlaylistAction()">Play All</button>
+          </div>
+        </Div>
+      </div>
+    </div>
+    <div class="playlist-body mt-5" *ngIf="(playlistMusicCount > 0) true : false;">
+        <Div class="song-list  container-fluid align-items-center" *ngFor="let item of playlistData.musics;let indexEle=index" #song >
+            <button class="playbtn d-none" #div (click)="getPlaylistAction(indexEle)">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="song-info d-flex align-items-center ml-3" >
+              <img [src]="item.img">
+              <div class="ml-3">
+                <h4>{{ item.name }}</h4>
+                <p>{{ item.band }}</p>
+              </div>
+            </div>
+            <div class="ml-5 pl-4 rel">
+              <p>Release Date: {{ playlistData.created_at | date:'mediumDate'}}</p>
+            </div>
+            <button class="ml-auto mr-3" (click)="removeRelationMusicPlaylist(item.id,song)" (click)="removeFromPayload(indexEle,playlistData.id)">
+              Remove
+            </button>
+          </Div>
+      <Div class="song-list d-flex container-fluid align-items-center">
+      
+     </Div>
+    </div>
+  </div>
+</div>

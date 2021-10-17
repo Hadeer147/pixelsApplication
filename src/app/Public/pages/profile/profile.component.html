@@ -1,0 +1,42 @@
+
+<section class="category">
+  <h3 class="fs-17 fw-500 color-wh  pb-2 mt-3">My Likes</h3>
+  <div class="cat-box">
+    <div class="tb-music-box-md music position-relative" *ngFor="let alltracke of likes">
+      <div class="tb-music-box-md music">
+        <img [src]="alltracke.img">
+        <div class="overlayer  top-0 position-absolute w-100 h-100 align-items-start  p-2 linear-black player">
+          <div class="position-relative w-100 h-100 justify-content-between flex-column d-flex">
+            <button class="menu trans-me w-100 d-flex justify-content-end align-items-center color-wh fs-11"><i
+                class="fas fa-ellipsis-v"></i></button>
+            <div class="toggles">
+            </div>
+            <div class="song-lower d-flex">
+              <button class="trans-me pr-2 color-sv play" (click)="gettrackeByID(alltracke.id)"><i
+                  class="fas fa-play"></i></button>
+              <div class="song-info">
+                <h4 class="color-wh fs-14 fw-600 text-uppercase mb-0">{{alltracke.name}}</h4>
+                <h5 class="color-sv fs-11 fw-300">{{ alltracke.band }}</h5>
+              </div>
+            </div>
+            <div class="dropdown position-absolute"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- section2 playlist -->
+  <section class="category mt-5 mb-4">
+    <h3 class="fs-17 fw-500 color-wh  pb-2">My Playlists</h3>
+    <div class="owl-carousel fiveOwl" >
+      <div class="tb-music-box-sm-round music d-grid rgrid-2-1 music justify-content-center align-items-center" *ngFor="let item of playlistKeys">
+          <a routerLink="/playlist/{{ playlist[item].id }}" class="w-100 top-0 position-fixed h-100"></a>
+          <img src="{{ playlist[item].musics[0].img }}">
+          <div class="musicInfo text-center">
+              <h3 class="fs-12 fw-400 pl-2 pt-2 color-wh">{{ playlist[item].name }}</h3>
+          </div>
+      </div>
+    </div>
+ </section>
+  

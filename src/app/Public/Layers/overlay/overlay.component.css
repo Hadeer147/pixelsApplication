@@ -1,0 +1,71 @@
+.overlay {
+    z-index: 1000;
+    background-color: #000000c7;
+    min-height: 100vh;
+    display: none;
+    opacity: 0;
+    transition: all 1.3s linear;
+}
+
+.overlay.active {
+    opacity: 1;
+    transition: all .3s linear;
+
+}
+.overlay .model {
+    width: 400px;
+    height: 466px;
+    display: block;
+    background: #191818;
+    transition: all .3s linear;
+    margin-top: 40px;
+}
+
+.overlay .model.active {
+    margin-top: 0px;
+}
+
+
+.overlay #playlistInsert {
+
+}
+
+.overlay #playlistInsert label {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.overlay #playlistInsert input {
+    padding: 7px 10px;
+    background: #333;
+    border: navajowhite;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.overlay #playlistInsert form button{
+    margin: 10px 0;
+    border: none;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 7px 0;
+}
+
+.overlay #playlistInsert .playlists .playlist_data h4 {
+    font-size: 13px;
+    color: #fff;
+}
+
+.overlay #playlistInsert .playlists .playlist_data p {
+    font-size: 10px;
+    color: #ccc;
+}
+
+.overlay #playlistInsert .playlists .playlist_data button {
+    border: navajowhite;
+    font-size: 12px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    width: 100px;
+}

@@ -1,0 +1,9 @@
+.cat-box {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 10px;
+}
+
+.cat-box  .tb-music-box-md {
+    margin-right: 10px;
+}

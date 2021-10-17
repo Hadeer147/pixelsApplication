@@ -1,0 +1,48 @@
+
+<div class="tb-container d-flex mt-5">
+    <Div class="tb-page d-flex flex-column contaier justify-content-start align-item-center ">
+
+
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100">
+                    <div class="login100-form-title" style="background-image: url(/../assets/images/bg.jpg);">
+                        <span class="login100-form-title-1">
+                            
+                        </span>
+                    </div>
+
+                <form action="#" method="post" #form="ngForm" (ngSubmit)="onSubmit(form)" class="mt-4"> 
+                    <div class="container">
+                    <div class="input-group">
+                        <ion-icon name="mail-outline"class="fs-22 color-wh pt-2 pl-2"></ion-icon>
+                        <input type="text" class="form-control" placeholder="Enter your email address" name="email" ngModel>
+                    </div>
+                    <div class="input-group">
+                        <ion-icon name="lock-closed-outline" class="fs-22 color-wh pt-2 pl-2"></ion-icon>
+                        <input type="password" class="form-control" placeholder="Enter your password" name="password" ngModel>
+                    </div>  
+                    <div class="row text-center pt-3">
+                        <div class="col-md-12">
+                            <input type="submit" value="Sign in" class="btnlog color-wh mt-4">
+
+                        </div>
+                    </div>
+
+                    <div class="row text-center pt-3">
+                        <div class="col-md-12">
+                        <p class="error">{{ loginFail }}</p>
+                            </div>
+                    <div class="col-md-12">
+                        <a href="http://127.0.0.1:8000/password/reset" class="fs-12 color-wh">Forget Password ?</a>
+                        <a href="#" class="signup ml-auto fs-12">Not member ?</a>                   
+                     </div>
+                    </div>
+                    </div>
+                </form>
+	
+			</div>
+		</div>
+	</div>
+</Div>
+</div>

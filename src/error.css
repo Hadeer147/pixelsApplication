@@ -1,0 +1,12 @@
+.error {
+    font-size: 12px;
+    color: #ff2828;
+}
+
+.fail {
+    border-left: 4px solid #cf3d3d;
+}
+
+.success {
+    border-left: 4px solid springgreen;
+}

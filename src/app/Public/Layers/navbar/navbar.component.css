@@ -1,0 +1,69 @@
+nav {
+    height: 63px;
+    z-index: 2;
+    background-color: var(--black);
+}
+
+nav .logo {
+    width: 91px;
+    height: 100%;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 28px;
+    min-width: 85px !important;
+}
+
+nav .container-fluid.grid-custom {
+    grid-template-columns: 18.5% 53% 28.5%;
+}
+
+nav form input {
+    border-radius: 20px !important;
+    border: none !important;
+    outline-offset: 0;
+    outline: none;
+    background: var(--dark-gray) !important;
+    height: 33px !important;
+}
+nav form label {
+    right: 20px;
+    top: 21px;  
+}
+
+nav form.active {
+    display: block !important;
+    width: 100%;
+    height: 100% !important;
+    position: absolute !important;
+    border-radius: 0 !important;
+    z-index: 100;
+}
+
+nav form.active input {
+    height: 100% !important;
+    border-radius: 0% !important;
+}
+
+.searchResult{
+    overflow: auto;
+    background: var(--black);
+    top: 4px;
+    font-size: 12px;
+}
+.searchResult td{
+    padding: 5px 5px;
+    border-radius: 3px;  
+}
+.searchResult td {
+    padding: 10px;
+    width: 100%;
+    color: var(--white);
+}
+.searchResult td.res {
+    cursor: pointer;
+}
+.searchResult td.res:hover {
+    background: var(--dark-sliver);
+}

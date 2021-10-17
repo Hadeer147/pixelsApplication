@@ -1,0 +1,384 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
+@import url('media.css');
+@import url('error.css');
+@import url('owl.css');
+
+:root {
+    --black: #010305;
+    --sliver: #ccc;
+    --dark-sliver: #15181b;
+    --white: #ffff ;
+    --grey: #818383;
+    --borderColor: #dee2e617;
+    --dark-gray: #202326;
+    --light-black:#101316;
+    --transition: .3s linear;
+}
+
+a,
+a:hover {
+  color: var(--colorWhite);
+  text-decoration: none;
+}
+
+body {
+  background: var(--black) !important;
+  font-family: 'Poppins', sans-serif;
+  height: 1000;
+  overflow-x: hidden;
+}
+
+/* general */
+.top-0 {
+  top: 0;
+}
+
+.linear-black {
+  background: linear-gradient(45deg, var(--black), transparent);
+}
+
+.trans-me {
+  background: transparent;
+  border: none;
+}
+
+/* color pattern*/
+.color-wh {
+  color: var(--colorWhite) !important;
+}
+
+.color-gr {
+  color: var(--grey);
+}
+
+.color-sv {
+  color: var(--sliver);
+}
+
+.color-or {
+  color: orangered;
+}
+
+/* Border */
+.border-left {
+  border-left: 1px solid var(--borderColor) !important
+}
+
+.border-right {
+  border-right: 1px solid var(--borderColor) !important
+}
+
+.border-top {
+  border-top: 1px solid var(--borderColor) !important
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--borderColor) !important
+}
+
+/* fonts */
+.title {
+  color: var(--white);
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.fs-11 {
+  font-size: 11px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-17 {
+  font-size: 17px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-21 {
+  font-size: 21px;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.fs-23 {
+  font-size: 23px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-26 {
+  font-size: 26px;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+/* TheBucket globals */
+.d-grid {
+  display: grid;
+}
+
+.grid-1-1 {
+  grid-template-columns: 50% 50%;
+}
+
+.grid-1-2 {
+  grid-template-columns: 25% 75%;
+}
+
+.grid-1-3 {
+  grid-template-columns: 33.3333% 66.6666%;
+}
+
+.grid-1-1-1 {
+  grid-template-columns: 33.3333% 33.3333% 33.3333%;
+}
+
+.grid-1-1-2 {
+    grid-template-columns: 25% 25% 50%;
+}
+.grid-1-1-1-1 {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-1-1-1-1-1 {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.rgrid-1-2 {
+    grid-template-rows: 25% 75%;
+}
+.rgrid-2-1 {
+    grid-template-rows: 75% 25%;
+}
+
+/* Navbar */
+nav {
+    height: 63px;
+    z-index: 2;
+    background-color: var(--black);
+}
+
+.grid-1-1-1-1 {
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.grid-1-1-1-1-1 {
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.rgrid-1-2 {
+  grid-template-rows: 25% 75%;
+}
+
+.rgrid-2-1 {
+  grid-template-rows: 75% 25%;
+}
+
+/* main container */
+.tb-container.custom-grid {
+  grid-template-columns: 13% 87%;
+  width: 100%;
+  min-height: 90.5vh;
+}
+
+/* tb pages */
+.tb-page {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: calc(100% - 17.5vw * 2);
+  margin: 0 100px;
+  margin: 0 auto;
+}
+
+/*Dark Mode*/
+/* -- Switch --*/
+.switch {
+  width: 23px;
+  height: 12px;
+  background: #ccc;
+  display: flex;
+  border-radius: 20px;
+  position: relative;
+}
+.switch .slider {
+  position: relative;
+}
+.switch .slider.round:before {
+  content: '';
+  display: block;
+  height: 15px;
+  width: 14px;
+  background: var(--colorWhite);
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  transition: var(--transition);
+}
+
+.switch input:checked + .slider {
+  background-color: var(--grey);
+  width: 100%;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+.switch input:checked + .slider.round:before {
+  left: 55%;
+  transition: var(--transition);
+}
+.switch + p {
+  position: relative;
+  top: -3px;
+  left: 10px;
+}
+
+.light-theme{
+  background: var(--white) !important;
+  font-family: 'Poppins', sans-serif;
+  height: 1000;
+}
+.invert{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.playlist .music-info button {
+    font-size: 12px;
+    width: 100px;
+    border-radius: 20px;
+    background: #fff;
+    border: navajowhite;
+    color: #000;
+    font-weight: bold;
+    transition: all .3s linear;
+}
+.playlist .music-info button:hover {
+    background: black;
+    color: #fff;
+}
+
+.playlist .song-list {
+    height: 80px;
+    margin-bottom: 2px;
+    display: grid !important;
+    grid-template-columns: 5% 15% 70% 10%;
+}
+.playlist .song-list:not(:last-child) {
+    background-color: #1a1a1a;
+}
+.playlist .song-list button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.playlist .song-list img {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+}
+
+.playlist .song-list h4 {
+    font-size: 12px;
+    color: #fff;
+    font-weight: revert;
+    margin: 0;
+}
+
+.playlist .song-list p {
+    color:  #ccc;
+    font-size: 12px;
+    margin: 0;
+}
+.EnterEmail{
+    background-color: #1a1f24;
+    height: 300px;
+    width: 480px;
+    border-radius: 10px;
+  }
+  hr {
+    border-top: 0.5px solid rgb(151, 149, 149);
+  }
+
+  .routerLinkActives{
+      color: orangered !important;
+  }

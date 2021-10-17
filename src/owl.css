@@ -1,0 +1,63 @@
+/* owl edit */
+.owl-theme .owl-nav [class*=owl-] {
+  color: #0f0e0e;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: var(--grey);
+}
+
+.owl-next.disabled,
+.owl-prev.disabled {
+  color: var(--grey) !important;
+}
+
+/* owl controls */
+.owl-carousel .disabled {
+  display: flex !important;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.owl-carousel:hover .owl-nav {
+  opacity: 1;
+}
+
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next {
+  width: 40px;
+  height: 40px;
+  background: var(--colorWhite) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--black);
+}
+
+.owl-carousel .owl-prev {
+  position: absolute !important;
+  left: -21px;
+}
+
+.owl-carousel .owl-next {
+  position: absolute !important;
+  right: -21px;
+}

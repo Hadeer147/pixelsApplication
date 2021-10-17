@@ -1,0 +1,67 @@
+<div class="tb-container d-flex mt-3">
+  <Div class="tb-page d-flex flex-column contaier justify-content-start align-item-center ">
+  
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/../assets/images/bg.jpg);">
+                    
+                </div>
+                <form class="mt-5" action="#" method="post" #form="ngForm" (ngSubmit)="onSubmit(form)">
+                  <div class="container">
+              <div class="input-group">
+                  <ion-icon name="person-circle-outline"class="fs-20 color-wh pt-2 pl-2"></ion-icon>
+                  <input type="text" placeholder="Name" class="form-control" name="name" ngModel>
+
+                  <p class="error">{{ validation.name }}</p>
+
+                </div>
+                
+                <div class="input-group">
+                  <ion-icon name="mail-outline"class="fs-20 color-wh pt-2 pl-2"></ion-icon>
+                 <input type="text" placeholder="Enter your email address" class="form-control" name="email" ngModel>
+                  <p class="error">{{ validation.email }}</p>
+                  
+              </div>
+
+              <div class="input-group">
+                  <ion-icon name="lock-closed-outline" class="fs-20 color-wh pt-2 pl-2"></ion-icon>
+                  <input type="password" placeholder="Enter your password" name="password" class="form-control"  ngModel>
+
+                  <p class="error">{{ validation.password }}</p>
+
+              </div>  
+              <div class="input-group">
+                  <ion-icon name="lock-closed-outline" class="fs-20 color-wh pt-2 pl-2"></ion-icon>
+
+                  <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password"ngModel>
+
+              </div> 
+              
+       
+              <div class="row text-center pt-2">
+                  <div class="col-md-12">
+                            <input type="submit" value="Sign in" class="btnlog color-wh mt-2">
+
+                  </div>
+              </div>
+
+              <div class="row text-center mt-2">
+              <div class="col-md-12">
+          <a href="http://127.0.0.1:8000/password/reset" class="forget fs-12">Forget Password ?</a>&nbsp;
+          <a href="/login" class="signup ml-auto fs-12">Already a member ?</a>
+              </div>
+              </div>
+                  </div>
+              </form>
+
+
+                
+
+
+            </div>
+		</div>
+	</div>
+</Div>
+</div>
